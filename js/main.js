@@ -13,7 +13,6 @@ if (tf.length>0){
 generarinterfaz()
 direccionar()
 
-
 function direccionar() {
 let peliculas = document.querySelectorAll(".poster");
 for (const pelicula of peliculas) {
