@@ -5,10 +5,9 @@ let detalle= document.querySelector("#detalle");
 const volver = document.querySelector("div.emoji-volver");
 
 
-
 function imprimedetalle (){
-    const {titulo, poster, categoria, genero, resumen, reparto} = recuperodetalle
-if (localStorage.pelicula){
+  const {titulo, poster, categoria, genero, resumen, reparto}  = recuperodetalle
+if (recuperodetalle){
  detalle.innerHTML =`<section id="contenido">
                 <h2>${titulo}</h2>
                 <img src="${poster}" alt="${titulo}" title="${titulo}">

@@ -25,22 +25,23 @@ for (const pelicula of peliculas) {
     });}
 }
 
+let buscar= document.querySelector("#buscar")
 
-// let buscar= document.querySelector("#buscar")
-// let q_busca = document.querySelector("#q_busca")
+function busca (){    
+buscar.addEventListener("click", ()=>{ 
+    let q_busca =document.querySelector(".q_busca").value;
+    console.log(q_busca);
+
+    let busqueda = tf.filter(elemento=>elemento == q_busca)
+    console.dir(busqueda);
+
+if (tf.includes(busqueda)=true){
+for  (elemento of tf){
+contenedor.innerHTML = `
+<div class="card">
+<img  class="poster" src= ${elemento.poster} alt="" id= ${elemento.id} title=${elemento.title}
+</div>` 
+}}})}
 
 
-// function busca (){    
-// buscar.addEventListener("click", (q_busca)=>{ 
-//     let idelemento = q_busca.target.id;
-//     let busqueda = tf.filter(elemento=>elemento.id == idelemento);
-// if (tf.includes(idelemento)==true){
-//  for  (const elemento of tf){
-// contenedor.innerHTML = `
-// <div class="card">
-// <img  class="poster" src= ${elemento.poster} alt="" id= ${elemento.id} title=${elemento.title}
-// </div>` 
-// }}})}
-
-
-// busca();
+busca();
