@@ -1,11 +1,12 @@
-let recuperodetalle=JSON.parse(localStorage.getItem("pelicula"));
+let recuperodetalle=localStorage.getItem("pelicula");
+console.log(recuperodetalle);
 
 let detalle= document.querySelector("#detalle");
 
 const volver = document.querySelector("div.emoji-volver");
 
 
-function imprimedetalle (){
+function imprimedetalle (pel){
   const {titulo, poster, categoria, genero, resumen, reparto}  = recuperodetalle
 if (recuperodetalle){
  detalle.innerHTML =`<section id="contenido">
