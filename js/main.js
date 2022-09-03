@@ -11,7 +11,6 @@ console.log(pedirinfo.response);}
 let pel =pedirinfo.response;
 
 generarinterfaz(pel);
-
 console.log(pel)
 direccionar(pel)
 });
@@ -33,17 +32,18 @@ function generarinterfaz (pel) {
 
 
 
-function direccionar() {
+function direccionar(pel) {
 let eliges= document.querySelectorAll(".poster");
+let busqueda;
 console.log(eliges);
 for (const elige of eliges) {
-        elige.addEventListener("click",(evento)=>{
+    elige.addEventListener("click",(evento)=>{
         idelemento = evento.target.id;    
-        console.dir(idelemento);
-        let busqueda = eliges.find(elemento => elemento.id == idelemento){
+        console.log(idelemento);
+        busqueda = eliges.find(elemento => elemento.id == idelemento)
         console.log(busqueda);
         localStorage.setItem("pelicula",JSON.stringify(busqueda));
-        window.location="/detalle.html"
+        window.location="./detalle.html"
         localStorage.getItem("pelicula")}
 );}
 }
@@ -51,34 +51,22 @@ for (const elige of eliges) {
 
 
 
-let buscar= document.querySelector("#buscar")
+function busca (){ 
 
-// function busca (){    
-// buscar.addEventListener("click", ()=>{ 
-//     let q_busca =document.querySelector(".q_busca").value;
-//     console.log(q_busca);
+    let input = document.querySelector("#buscar") 
+    let key;  
+    input.addEventListener("keyup", (evento)=>{ 
+    key=evento.target.value;
+    console.log(key)
+    if (key != ""){ eliges.find(elemento => elemento.id == key)
+        console.log(eliges)
+        generarinterfaz (pel)
+}else{
+    contenedor.innerHTML= `<h1>error al cargar la pagina , vuelva  intentarlo en unos segundos</h1>`}
+})
+}
 
-//     let busqueda = pedirinfo.filter(elemento=>elemento == q_busca)
-//     console.dir(busqueda);
-
-// if (pedirinfo.includes(busqueda)=true){
-// for  (elemento of tf){
-// contenedor.innerHTML = `
-// <div class="card">
-// <img  class="poster" src= ${elemento.poster} alt="" id= ${elemento.id} title=${elemento.title}
-// </div>` 
-// }}})}
-
-
-// busca();
-
-
-
-
-
-
-
-// busca();
+busca();
 
 
 

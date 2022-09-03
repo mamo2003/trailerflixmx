@@ -67,7 +67,7 @@ img:hover {
     font-size: 3em;
 }
 
-input.q_busca{ width: 400px;
+input#buscar{ width: 400px;
     height: 50px;
     border-radius: 20px;
     text-align: center;
